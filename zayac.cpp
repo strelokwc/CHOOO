@@ -1,12 +1,10 @@
-#include <fstream>
+#include <iostream>
 #include <vector>
 using namespace std;
 int main () {
-    ifstream i ("input.txt");
-    ofstream f ("output.txt");
     int n,k,t,p=2;
     vector < vector <int> > a;
-    i>>k>>n;
+    cin>>k>>n;
     a.resize(n+1);
     for (int i=0; i<=n; i++)
         a[i].resize(92);
@@ -27,6 +25,6 @@ int main () {
         if (a[n][i]!=0)
             g=0;
         if (g==0)
-            f<<a[n][i];
+            cout<<a[n][i];
     }
 }
